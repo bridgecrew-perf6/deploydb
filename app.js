@@ -6,7 +6,7 @@ const cors=require('cors');
 const app = express();
 const localDBUrl = 'mongodb://127.0.0.1:27017/db_edureka';
 app.use(express.json());
-app.use('/', router);
+app.use('/api', router);
 
 mongoose.connect(process.env.SERVER_URL, {
     useNewUrlParser: true, useUnifiedTopology: true
