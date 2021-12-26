@@ -7,6 +7,7 @@ const app = express();
 const localDBUrl = 'mongodb://127.0.0.1:27017/db_edureka';
 app.use(express.json());
 app.use('/api', router);
+app.use(cors());
 
 mongoose.connect(process.env.SERVER_URL, {
     useNewUrlParser: true, useUnifiedTopology: true
