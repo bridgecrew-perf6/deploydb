@@ -10,7 +10,8 @@ app.use('/api', router);
 app.use(cors());
 
 mongoose.connect(process.env.SERVER_URL, {
-    useNewUrlParser: true, useUnifiedTopology: true
+    useNewUrlParser: true, useUnifiedTopology: true,
+    useFindAndModify:false
 })
     .then(res => {
         app.listen(process.env.PORT,() => {
